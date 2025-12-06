@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>TITLE</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css1/main.css">
+
+</head>
+
+<body>
+
+<ul>
+<font face="showcard gothic">
+  <li><a id="homeButton" href="/">Abc</a></li>
+  <li><a href="/en/registration">Registration</a></li>
+  <li style="float:right">
+    <a class="active">language: 
+      <select id="languageSelect" name="language">
+        <option value="en" <%= (language === 'en') ? 'selected' : '' %>>English</option>
+        <option value="de" <%= (language === 'de') ? 'selected' : '' %>>Deutsch</option>
+      </select>
+    </a>
+  </li>
+  <li style="float:right">
+    <a class="anmeldung">
+        <p class="no-hover"><input type="text" name="email" value="" size="30" maxlength="30" placeholder="E-Mail"></p>
+        <p class="no-hover"><input type="password" name="password" value="" size="30" maxlength="30" placeholder="Password"></p>
+    </a>
+</li>
+	</font>
+</ul>
+
+
+  <h4>
+    <!-- Here comes the form, that is transferred to "app.js" -->
+    <form action="/contact" method="post">
+      <div class="name-container">
+        <p>Name: <input type="text" name="name" value="" size="30" maxlength="30"></p>
+        <p>Surname: <input type="text" name="surname" value="" size="30" maxlength="30"></p>
+      </div>
+      <div class="contact-user-container">
+        <p>E-Mail: <input type="text" name="email" value="" size="30" maxlength="256"> </p>
+        <p>Number: <input type="text" name="number" value="" size="30" maxlength="50"> </p>
+      </div>
+        <p>Please write your idea into the text box:</p>
+        <p> <textarea rows="10" name="text" cols="100"> </textarea> </p>
+        Auswahl: <select name="Land">
+            <option value="Austria">Austria</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Germany">Germany</option>
+            <option value="USA">USA</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="South Africa">South Africa</option>
+        </select>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <p> <div class="box"> </p>
+    </div>
+
+    <div id="Impressum"> <p>&copy; 2024 </p>
+        <p> Austria </p> </div>
+
+</h4>
+</body>
+
+<script>
+    // Add an event listener to the home button
+    document.getElementById('homeButton').addEventListener('click', function() {
+        location.reload(); // Reload the current page
+    });
+
+  // Get the select element
+  const languageSelect = document.getElementById('languageSelect');
+
+  // Add an event listener for the change event
+  languageSelect.addEventListener('change', function () {
+    // Get the selected value (language code)
+    const selectedLanguage = languageSelect.value;
+
+    // Get the current URL
+    const currentUrl = window.location.href;
+
+    // Check if the current URL already contains a language parameter
+    const hasLanguageParam = currentUrl.includes('/');
+
+    // Create a new URL based on the selected language
+    const updatedUrl = hasLanguageParam
+      ? currentUrl.replace(/\/[a-z]{2}\//, `/${selectedLanguage}/`)
+      : `${currentUrl}/${selectedLanguage}`;
+
+    // Reload the page with the updated URL
+    window.location.href = updatedUrl;
+  });
+
+</script>
+</body>
+</html>

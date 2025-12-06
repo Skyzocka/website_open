@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<title>Ihre Idee</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css1/main.css">
+
+</head>
+
+<body>
+
+<ul>
+<font face="showcard gothic">
+  <li><a id="homeButton" href="/">Abc</a></li>
+  <li><a href=/de/registration>Registrierung</a></li>
+
+  <a class="active">Sprache / language: 
+  <li style="float:right">
+    <select name="language">
+    <option value="1">Deutsch</option>
+    <option value="2">English</option>
+  </select>
+  </a>
+  </li>
+
+  <li style="float:right">
+    <a class="anmeldung">
+        <p class="no-hover"><input type="text" name="email" value="" size="30" maxlength="30" placeholder="E-Mail"></p>
+        <p class="no-hover"><input type="password" name="password" value="" size="30" maxlength="30" placeholder="Passwort"></p>
+    </a>
+</li>
+	</font>
+</ul>
+
+
+  <h4>
+    <!-- Here comes the form, that is transferred to "app.js" -->
+    <form action="/contact" method="post">
+      <div class="name-container">
+        <p>Vorname: <input type="text" name="name" value="" size="30" maxlength="30"></p>
+        <p>Nachname: <input type="text" name="surname" value="" size="30" maxlength="30"></p>
+      </div>
+      <div class="contact-user-container">
+        <p>E-Mail: <input type="text" name="email" value="" size="30" maxlength="256"> </p>
+        <p>Telefonnummer: <input type="text" name="number" value="" size="30" maxlength="50"> </p>
+      </div>
+        <p>Bitte schreiben Sie etwas in die Textbox:</p>
+        <p> <textarea rows="10" name="text" cols="100"> </textarea> </p>
+        Auswahl: <select name="Land">
+            <option value="1">&Ouml;sterreich </option>
+            <option value="2">Schweiz</option>
+            <option value="3">Deutschland </option>
+            <option value="4">Amerika </option>
+        </select>
+        <p><input type="submit" value="Jetzt senden!"></p>
+    </form>
+
+    <p> <div class="box"> </p>
+    </div>
+
+    <div id="Impressum"> <p>&copy; 2024 </p>
+        <p> Austria </p> </div>
+
+</h4>
+</body>
+
+<script>
+    // Add an event listener to the home button
+    document.getElementById('homeButton').addEventListener('click', function() {
+        location.reload(); // Reload the current page
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

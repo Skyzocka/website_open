@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrierung</title>
+    <!-- Link to your main.css file -->
+	<link rel="stylesheet" type="text/css" href="/css1/main.css">
+</head>
+
+<body>
+
+<!-- {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+{% endif %}
+
+Dieser Code ist ein Überbleibstel von der Python Ausführung durch app.py und führt ohne gute Implementierung zu Fehlern in app.js -->
+
+
+<ul>
+    <font face="showcard gothic">
+      <li><a id="homeButton" href="/">Abc</a></li>
+      <li><a href=/de/registration>Registrierung</a></li>
+      <li style="float:right"><a class="active">Sprache / language: <select name="language">
+        <option value="1">Deutsch</option>
+        <option value="2">English</option>
+      </select></a></li>
+      <li style="float:right">
+        <a class="anmeldung">
+            <p class="no-hover"><input type="text" name="email" value="" size="30" maxlength="30" placeholder="E-Mail"></p>
+            <p class="no-hover"><input type="password" name="password" value="" size="30" maxlength="30" placeholder="Passwort"></p>
+        </a>
+    </li>
+        </font>
+    </ul>
+
+<div class="registration-container">
+    <div class="registration-form">
+        <h3 class="registration-heading">Registrieren Sie sich</h3>
+        <h4>
+            <!-- Here comes the registration form, that is transferred to "app.js" -->
+            <form action="/registration" method="post">
+                <p>E-Mail: <input type="text" name="name" value="" size="30" maxlength="50"> </p>
+                <p>Passwort: <input type="password" name="pwd" value="" size="30" maxlength="256"> </p>
+                Geburtsdatum: <input type="date" name="birthdate" id="birthdate">
+                Auswahl: <select name="Land">
+                    <option value="1">&Ouml;sterreich</option>
+                    <option value="2">Schweiz</option>
+                    <option value="3">Deutschland</option>
+                    <option value="4">USA</option>
+                </select>
+                <input type="submit" value="Registrieren" class="registration-submit">
+            </form>
+        </h4>
+    </div>
+</div>
+</body>
+
+</html>

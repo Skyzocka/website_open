@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>TITLE</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css1/main.css">
+
+</head>
+
+<body>
+
+<ul>
+<font face="showcard gothic">
+  <li><a id="homeButton" href="/">Abc</a></li>
+  <li><a href=/en/registration>Registration</a></li>
+  <li style="float:right"><a class="active">language: <select name="language">
+    <option value="1">English</option>
+    <option value="2">Deutsch</option>
+  </select></a></li>
+  <li style="float:right">
+    <a class="anmeldung">
+        <p class="no-hover"><input type="text" name="email" value="" size="30" maxlength="30" placeholder="E-Mail"></p>
+        <p class="no-hover"><input type="password" name="password" value="" size="30" maxlength="30" placeholder="Passwort"></p>
+        <input type="submit" value="confirm" class="login-submit">
+    </a>
+</li>
+	</font>
+</ul>
+
+<h2>
+  <b> HEADLINE</b>
+</h2>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. <br><br>
+
+  Füllen Sie dieses Formular schnell und einfach aus: <br><br>
+
+
+  <h4>
+    <!-- Here comes the form, that is transferred to "app.js" -->
+    <form action="/contact" method="post">
+      <div class="name-container">
+        <p>Name: <input type="text" name="name" value="" size="30" maxlength="30"></p>
+        <p>Surname: <input type="text" name="surname" value="" size="30" maxlength="30"></p>
+      </div>
+      <div class="contact-user-container">
+        <p>E-Mail: <input type="password" name="email" value="" size="30" maxlength="256"> </p>
+        <p>Number: <input type="text" name="number" value="" size="30" maxlength="50"> </p>
+      </div>
+        <p>Please write something in the box</p>
+        <p> <textarea rows="10" name="text" cols="100"> </textarea> </p>
+        Options: <select name="Land">
+            <option value="Austria">Austria</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="Germany">Germany</option>
+            <option value="USA">USA</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="South Africa">South Africa</option>
+        </select>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+    <p> <div class="box"> </p>
+    </div>
+
+    <div id="Impressum"> <p>&copy; 2024 </p>
+        <p> Austria </p> </div>
+
+</h4>
+</body>
+
+<script>
+    // Event listener for the home button
+    document.getElementById('homeButton').addEventListener('click', function() {
+        location.reload(); // Reload the current page
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
