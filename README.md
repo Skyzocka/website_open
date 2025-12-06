@@ -1,4 +1,4 @@
-# Startup Website Project (E-Dracing / Transferra)
+# Startup Website Project
 
 This repository contains the source code for a web platform developed for a startup project. The application handles user registration, authentication, and a contact system for "Idea Givers".
 
@@ -35,9 +35,22 @@ To run this project locally, you need Node.js and a PostgreSQL instance installe
 
 ### Installation
 
-Clone the repository and install the dependencies:
+1. Clone the repository and install the dependencies:
 
 ```bash
 git clone <repository-url>
 cd <repository-name>
 npm install
+```
+
+2. Database Setup
+Ensure you have a PostgreSQL database running. The application expects a database named login_information_db (or similar, check src/app.js configuration).
+
+3. Configuration
+Note: For security reasons, sensitive credentials (SMTP, DB passwords) have been removed or redacted in this repository. You will need to configure your own environment variables or update the config in src/app.js.
+
+4. Run the Server
+```bash
+node src/app.js
+```
+The server usually starts on port 4000. Visit http://localhost:4000 in your browser.
